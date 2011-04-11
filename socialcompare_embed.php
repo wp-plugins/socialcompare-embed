@@ -54,9 +54,13 @@ function socialcompare_shortcode($atts, $content=null, $code='') {
 }
 
 function socialcompare_admin_menu(){
+	$i18nDir=dirname(socialcompare_get_basename()).'/lang';
+	//i18n is only used in the admin page for now so do not load translation in init
+	load_plugin_textdomain('socialcompare_embed', false, $i18nDir);
+
 	if (function_exists('add_submenu_page')) {
 		//add link under plugin for users that can manage options to allow default embed options
-		add_submenu_page('plugins.php', __('SocialCompare embed options','socialcompare-embed'), 'SocialCompare', 'manage_options', 'socialcompare-plugin-page', 'socialcompare_plugin_page');
+		add_submenu_page('plugins.php', __('SocialCompare embed options','socialcompare_embed'), 'SocialCompare', 'manage_options', 'socialcompare-plugin-page', 'socialcompare_plugin_page');
 	}
 	add_filter('plugin_row_meta', 'socialcompare_register_plugin_links', 10, 2);
 }
@@ -100,9 +104,9 @@ function socialcompare_update_size($param_name){
 		$size=$_POST[$param_name];
 		if (preg_match('#^\d+(%|px)?$#', $size)) {
 			update_option($param_name, $size);
-			return __('Size saved', 'socialcompare-embed').'<br />';
+			return __('Size saved', 'socialcompare_embed').'<br />';
 		}
-		return '<strong style="color:red">'.__('Invalid size value', 'socialcompare-embed').'</strong><br />';
+		return '<strong style="color:red">'.__('Invalid size value', 'socialcompare_embed').'</strong><br />';
 	}
 	return false;
 }
@@ -130,10 +134,10 @@ function socialcompare_plugin_page(){
 					$socialcompare_design=substr($socialcompare_design, 1);
 				}
 				update_option('socialcompare_design', $socialcompare_design);
-				$result.=__('Design option saved', 'socialcompare-embed').'<br />';
+				$result.=__('Design option saved', 'socialcompare_embed').'<br />';
 			}
 			else {
-				$result.='<strong style="color:red">'.__('Design option invalid', 'socialcompare-embed').'</strong><br />';
+				$result.='<strong style="color:red">'.__('Design option invalid', 'socialcompare_embed').'</strong><br />';
 			}
 		}
 
@@ -141,27 +145,27 @@ function socialcompare_plugin_page(){
 			<div id="message" class="updated fade"><p><strong><?php echo $result; ?></strong></p></div>
 		<?php
 	}
-	?><h2><?php _e('SocialCompare Configuration', 'socialcompare-embed'); ?></h2>
-<p><?php _e('You can specify here the default size and design options to use when embedding a SocialCompare comparison table using [socialcompare] or [sc] shortcode.', 'socialcompare-embed')?></p>
+	?><h2><?php _e('SocialCompare Configuration', 'socialcompare_embed'); ?></h2>
+<p><?php _e('You can specify here the default size and design options to use when embedding a SocialCompare comparison table using [socialcompare] or [sc] shortcode.', 'socialcompare_embed')?></p>
 <form action="" method="post">
-<p><label for="socialcompare_width"><?php _e('Default width', 'socialcompare-embed'); ?></label> <input name="socialcompare_width" type="text" size="15" maxlength="12" value="<?php echo $socialcompare_width; ?>" /> ('100%', '500')</p>
-<p><label for="socialcompare_height"><?php _e('Default height', 'socialcompare-embed'); ?></label> <input name="socialcompare_height" type="text" size="15" maxlength="12" value="<?php echo $socialcompare_height; ?>" />  ('450', '600')</p>
-<p><label for="socialcompare_design"><?php _e('Default design options', 'socialcompare-embed'); ?></label> <small>(<?php _e('More details:', 'socialcompare-embed'); ?>
+<p><label for="socialcompare_width"><?php _e('Default width', 'socialcompare_embed'); ?></label> <input name="socialcompare_width" type="text" size="15" maxlength="12" value="<?php echo $socialcompare_width; ?>" /> ('100%', '500')</p>
+<p><label for="socialcompare_height"><?php _e('Default height', 'socialcompare_embed'); ?></label> <input name="socialcompare_height" type="text" size="15" maxlength="12" value="<?php echo $socialcompare_height; ?>" />  ('450', '600')</p>
+<p><label for="socialcompare_design"><?php _e('Default design options', 'socialcompare_embed'); ?></label> <small>(<?php _e('More details:', 'socialcompare_embed'); ?>
  <a href="http://blog.socialcompare.com/2010/12/08/customize-the-embed-comparison-table/" target="_blank">[EN]</a>
  <a href="http://blog.socialcompare.com/fr/2010/12/08/personnaliser-le-tableau-comparatif-a-inclure-sur-votre-blog-ou-site-web/" target="_blank">[FR]</a>)</small>
 <br /><textarea name="socialcompare_design" cols="80" rows="3"><?php echo $socialcompare_design; ?></textarea></p>
 <p><button type="submit" name="update"><?php _e('Update options &raquo;'); ?></button></p>
 </form>
-<h2><?php _e('How to embed SocialCompare\'s comparison?', 'socialcompare-embed'); ?></h2>
-<p><?php _e('Once you have a comparison URL you can use following syntax in your blog post or page.', 'socialcompare-embed')?></p>
+<h2><?php _e('How to embed SocialCompare\'s comparison?', 'socialcompare_embed'); ?></h2>
+<p><?php _e('Once you have a comparison URL you can use following syntax in your blog post or page.', 'socialcompare_embed')?></p>
 <code>[socialcompare]http://socialcompare.com/en/w/apples-and-oranges[/socialcompare]</code><br />
 <br />
 <code>[sc]http://socialcompare.com/en/comparison/apples-and-oranges[/sc]</code>
-<p><?php _e('You can override the default dimensions specified above using this syntax.', 'socialcompare-embed')?></p>
+<p><?php _e('You can override the default dimensions specified above using this syntax.', 'socialcompare_embed')?></p>
 <code>[socialcompare width="50%" height="300"]http://socialcompare.com/en/comparison/apples-and-oranges[/socialcompare]</code><br />
 <br />
 <code>[sc height="600" width="500"]http://socialcompare.com/en/comparison/apples-and-oranges[/sc]</code>
-<p><?php _e('You can override the default design specified above using this syntax.', 'socialcompare-embed')?></p>
+<p><?php _e('You can override the default design specified above using this syntax.', 'socialcompare_embed')?></p>
 <code>[socialcompare width="50%" height="300"]http://socialcompare.com/en/comparison/apples-and-oranges#nofull;noflags[/socialcompare]</code><br />
 <br />
 <code>[sc]http://socialcompare.com/en/comparison/apples-and-oranges#noedit[/sc]</code>
