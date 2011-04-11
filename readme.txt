@@ -3,7 +3,7 @@ Contributors: socialcompare
 Tags: socialcompare, embed, comparison, table, matrix, compare, grid
 Requires at least: 2.9
 Tested up to: 3.1.1
-Stable tag: trunk
+Stable tag: 1.0
 
 Allows to easily embed a comparison table from SocialCompare within a post or page.
 
