@@ -11,6 +11,7 @@ Allows to easily embed a comparison table from SocialCompare within a post or pa
 
 Allows to easily embed a comparison table from SocialCompare, within a post using shortcode, or oembed.
 You can use directly the comparison url or the embed url.
+This plugin also helps to define the default size and style you would like to apply to your embedded comparisons.
 
 Syntax:
 
@@ -44,9 +45,11 @@ http://blog.socialcompare.com/2010/12/08/customize-the-embed-comparison-table/
 
 == Screenshots ==
 
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
-the directory of the stable readme.txt, so in this case, `/tags/4.3/screenshot-1.png` (or jpg, jpeg, gif)
-2. This is the second screen shot
+1. Sample comparison table: default design
+2. Sample comparison table: blue design
+3. Sample comparison table: tiny design
+4. Sample comparison table: compact design
+5. This is the admin interface to customize the default embed options
 
 == Changelog ==
 
