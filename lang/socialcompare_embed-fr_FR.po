@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SocialCompare embed 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-11 11:19+0100\n"
+"POT-Creation-Date: 2011-04-12 21:32+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Alexis Fruhinsholz <alexis@socialcompare.com>\n"
 "Language-Team:  <wp@socialcompare.com>\n"
@@ -17,78 +17,87 @@ msgstr ""
 "X-Poedit-Basepath: ../\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: socialcompare_embed.php:62
+#: socialcompare_embed.php:63
 msgid "SocialCompare embed options"
 msgstr "Options de SocialCompare embed"
 
-#: socialcompare_embed.php:106
+#: socialcompare_embed.php:107
 msgid "Size saved"
 msgstr "Dimension enregistré"
 
-#: socialcompare_embed.php:108
+#: socialcompare_embed.php:109
 msgid "Invalid size value"
 msgstr "Dimension invalide"
 
 # Use Wordpress translation
-#: socialcompare_embed.php:120
+#: socialcompare_embed.php:121
 msgid "Cheatin&#8217; uh?"
 msgstr ""
 
-#: socialcompare_embed.php:136
+#: socialcompare_embed.php:137
 msgid "Design option saved"
 msgstr "Option de design enregistré "
 
-#: socialcompare_embed.php:139
+#: socialcompare_embed.php:140
 msgid "Design option invalid"
 msgstr "Option de design invalide"
 
-#: socialcompare_embed.php:147
+#: socialcompare_embed.php:148
 msgid "SocialCompare Configuration"
 msgstr "Configuration de SocialCompare"
 
-#: socialcompare_embed.php:148
+#: socialcompare_embed.php:149
 msgid "You can specify here the default size and design options to use when embedding a SocialCompare comparison table using [socialcompare] or [sc] shortcode."
 msgstr "Vous pouvez préciser ici les dimensions et le design par défaut que vous souhaitez appliquer lorsque vous utilisez les balises [socialcompare] ou [sc]."
 
-#: socialcompare_embed.php:150
+#: socialcompare_embed.php:151
 msgid "Default width"
 msgstr "Largeur par défaut"
 
 #: socialcompare_embed.php:151
+#, php-format
+msgid "ie: '100%' or '500'"
+msgstr "ex: '100%' ou '500'"
+
+#: socialcompare_embed.php:152
 msgid "Default height"
 msgstr "Hauteur par défaut"
 
 #: socialcompare_embed.php:152
+msgid "ie: '450'"
+msgstr "ex: '450'"
+
+#: socialcompare_embed.php:153
 msgid "Default design options"
 msgstr "Options de design par défaut"
 
-#: socialcompare_embed.php:152
+#: socialcompare_embed.php:153
 msgid "More details:"
 msgstr "Plus de détails"
 
 # Use Wordpress translation
-#: socialcompare_embed.php:156
+#: socialcompare_embed.php:157
 msgid "Update options &raquo;"
 msgstr ""
 
-#: socialcompare_embed.php:158
+#: socialcompare_embed.php:159
 msgid "How to embed SocialCompare's comparison?"
 msgstr "Comment inclure un comparatif de SocialCompare"
 
-#: socialcompare_embed.php:159
+#: socialcompare_embed.php:160
 msgid "Once you have a comparison URL you can use following syntax in your blog post or page."
 msgstr "Une fois que vous avez l'URL d'un comparatif, vous pouvez utiliser la syntaxe suivante dans vos articles ou pages."
 
-#: socialcompare_embed.php:163
+#: socialcompare_embed.php:164
 msgid "You can override the default dimensions specified above using this syntax."
 msgstr "Vous pouvez forcer les dimensions par défaut en utilisant cette syntaxe."
 
-#: socialcompare_embed.php:167
+#: socialcompare_embed.php:168
 msgid "You can override the default design specified above using this syntax."
 msgstr "Vous pouvez forcer le design par défaut en utilisant cette syntaxe."
 
 # Use Wordpress translation
-#: socialcompare_embed.php:183
+#: socialcompare_embed.php:184
 msgid "Settings"
 msgstr ""
 

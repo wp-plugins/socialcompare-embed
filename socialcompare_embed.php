@@ -3,12 +3,12 @@
 Plugin Name: SocialCompare embed
 Plugin URI: http://socialcompare.com/
 Description: Allows to easily embed a SocialCompare comparison within a post. [socialcompare]http://socialcompare.com/en/comparison/apples-and-oranges[/socialcompare] or [sc]http://socialcompare.com/en/w/apples-and-oranges[/sc]
-Version: 1.0
+Version: 1.0.1
 Author: SocialCompare (Alexis)
 Author URI: http://socialcompare.com/en/member/alexis
 License: GPL2
 */
-/*  Copyright 2010  Alexis Fruhinsholz  (email: alexis@socialcompare.com)
+/*  Copyright 2010-2012  Alexis Fruhinsholz  (email: alexis@socialcompare.com)
 
 	This program is free software; you can redistribute it and/or modify
 	it under the terms of the GNU General Public License, version 2, as
@@ -148,8 +148,8 @@ function socialcompare_plugin_page(){
 	?><h2><?php _e('SocialCompare Configuration', 'socialcompare_embed'); ?></h2>
 <p><?php _e('You can specify here the default size and design options to use when embedding a SocialCompare comparison table using [socialcompare] or [sc] shortcode.', 'socialcompare_embed')?></p>
 <form action="" method="post">
-<p><label for="socialcompare_width"><?php _e('Default width', 'socialcompare_embed'); ?></label> <input name="socialcompare_width" type="text" size="15" maxlength="12" value="<?php echo $socialcompare_width; ?>" /> ('100%', '500')</p>
-<p><label for="socialcompare_height"><?php _e('Default height', 'socialcompare_embed'); ?></label> <input name="socialcompare_height" type="text" size="15" maxlength="12" value="<?php echo $socialcompare_height; ?>" />  ('450', '600')</p>
+<p><label for="socialcompare_width"><?php _e('Default width', 'socialcompare_embed'); ?></label> <input name="socialcompare_width" type="text" size="15" maxlength="12" value="<?php echo $socialcompare_width; ?>" /> <small><?php _e('ie: \'100%\' or \'500\'') ?></small></p>
+<p><label for="socialcompare_height"><?php _e('Default height', 'socialcompare_embed'); ?></label> <input name="socialcompare_height" type="text" size="15" maxlength="12" value="<?php echo $socialcompare_height; ?>" /> <small><?php _e('ie: \'450\''); ?></small></p>
 <p><label for="socialcompare_design"><?php _e('Default design options', 'socialcompare_embed'); ?></label> <small>(<?php _e('More details:', 'socialcompare_embed'); ?>
  <a href="http://blog.socialcompare.com/2010/12/08/customize-the-embed-comparison-table/" target="_blank">[EN]</a>
  <a href="http://blog.socialcompare.com/fr/2010/12/08/personnaliser-le-tableau-comparatif-a-inclure-sur-votre-blog-ou-site-web/" target="_blank">[FR]</a>)</small>

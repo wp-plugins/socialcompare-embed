@@ -1,15 +1,24 @@
-=== SocialCompare embed ===
+=== SocialCompare table embed ===
 Contributors: socialcompare
-Tags: socialcompare, embed, comparison, table, matrix, compare, grid
+Tags: socialcompare, embed, comparison, table, matrix, compare, grid, chart, csv, excel
 Requires at least: 2.9
-Tested up to: 3.1.1
-Stable tag: 1.0
+Tested up to: 3.4.2
+Stable tag: 1.0.1
 
 Allows to easily embed a comparison table from SocialCompare within a post or page.
 
 == Description ==
 
-Allows to easily embed a comparison table from SocialCompare, within a post using shortcode, or oembed.
+SocialCompare enables you to create and embed easily nice, interactive and collaborative tables.
+Everyone can use socialcompare platform to create the table (no need to know HTML coding) and then use this plugin to embed it with a custom design.
+Tables can contain various data types: images, videos, votes, ratings, text, currency, number, units...
+Tables can be imported from csv data, html... and reuse data from one table to another one, and updates are propagated.
+Users can sort data, drag and drop the columns and lines, rotate the table, suggest modifications or update directly the cells depending on the editor's rights.
+Finally, tables can be multilingual, contains units conversion, 
+
+If you like the plugin, please rate it on its plugin page in the WP Plugin Directory.
+
+Allows to easily embed a user-generated comparisons tables from [SocialCompare](http://socialcompare.com/ "User-generated comparisons tables"), within a post using shortcode, or oembed.
 You can use directly the comparison url or the embed url.
 This plugin also helps to define the default size and style you would like to apply to your embedded comparisons.
 
@@ -52,6 +61,9 @@ http://blog.socialcompare.com/2010/12/08/customize-the-embed-comparison-table/
 5. This is the admin interface to customize the default embed options
 
 == Changelog ==
+
+= 1.0.1 =
+Minor admin page changes
 
 = 1.0 =
 First version with basic functionnality
