@@ -3,7 +3,7 @@
 Plugin Name: SocialCompare embed
 Plugin URI: http://socialcompare.com/
 Description: Allows to easily embed a SocialCompare comparison within a post. [socialcompare]http://socialcompare.com/en/comparison/apples-and-oranges[/socialcompare] or [sc]http://socialcompare.com/en/w/apples-and-oranges[/sc]
-Version: 1.0.1
+Version: 1.1
 Author: SocialCompare (Alexis)
 Author URI: http://socialcompare.com/en/member/alexis
 License: GPL2
@@ -34,6 +34,11 @@ function socialcompare_shortcode($atts, $content=null, $code='') {
 		if (isset($matches[4])) {
 			$widgetUrl.=$matches[4];
 		}
+   }
+   else if (preg_match('@^https?://([^/]+)/.*$@i', $content)) {
+		$widgetUrl=$content;
+   }
+   if (isset($widgetUrl)) {
 		//check if there is a height or width specified in the [sc] or [socialcompare] tags
 		extract(shortcode_atts(array('width' => 0, 'height' => 0), $atts));
 		if (empty($width)) { $width=socialcompare_get_width(); }
