@@ -1,4 +1,4 @@
-=== SocialCompare.biz table embed ===
+=== SocialCompare table embed ===
 Contributors: socialcompare
 Tags: socialcompare, embed, comparison, table, matrix, compare, grid, chart, csv, excel
 Requires at least: 2.9
