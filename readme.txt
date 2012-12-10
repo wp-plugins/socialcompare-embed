@@ -3,7 +3,7 @@ Contributors: socialcompare
 Tags: socialcompare, embed, comparison, table, matrix, compare, grid, chart, csv, excel
 Requires at least: 2.9
 Tested up to: 3.4.2
-Stable tag: 1.1
+Stable tag: 1.2
 
 Allows to easily embed a comparison table from SocialCompare or SocialCompare.biz within a post or page.
 
@@ -62,6 +62,10 @@ SocialCompare.biz table can only use the default design of the pro account.
 5. This is the admin interface to customize the default embed options
 
 == Changelog ==
+
+= 1.2 =
+Add scrolling option
+`[sc width="90%" height="960" scrolling="no"]http://socialcompare.com/en/w/apples-and-oranges#nofull;noflags[/sc]`
 
 = 1.1 =
 Add SocialCompare.biz support

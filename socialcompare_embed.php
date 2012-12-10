@@ -3,7 +3,7 @@
 Plugin Name: SocialCompare embed
 Plugin URI: http://socialcompare.com/
 Description: Allows to easily embed a SocialCompare comparison within a post. [socialcompare]http://socialcompare.com/en/comparison/apples-and-oranges[/socialcompare] or [sc]http://socialcompare.com/en/w/apples-and-oranges[/sc]
-Version: 1.1
+Version: 1.2
 Author: SocialCompare (Alexis)
 Author URI: http://socialcompare.com/en/member/alexis
 License: GPL2
@@ -40,11 +40,12 @@ function socialcompare_shortcode($atts, $content=null, $code='') {
    }
    if (isset($widgetUrl)) {
 		//check if there is a height or width specified in the [sc] or [socialcompare] tags
-		extract(shortcode_atts(array('width' => 0, 'height' => 0), $atts));
+		extract(shortcode_atts(array('width' => 0, 'height' => 0, 'scrolling'=> 'auto'), $atts));
 		if (empty($width)) { $width=socialcompare_get_width(); }
 		if (empty($height)) { $height=socialcompare_get_height(); }
 		$width=(preg_match('#^\d+%$#', $width) ? $width : intval($width));
 		$height=(preg_match('#^\d+%$#', $height) ? $height : intval($height));
+      $scrolling=(preg_match('#^(auto|yes|no)$#', $scrolling) ? $scrolling : 'auto');
 
 		//add default design param if not already set in the URL
 		$hashPos=strpos($widgetUrl, '#');
@@ -54,7 +55,7 @@ function socialcompare_shortcode($atts, $content=null, $code='') {
 				$widgetUrl.='#'.$socialcompare_design;
 			}
 		}
-		return '<iframe src="'.$widgetUrl.'" width="'.$width.'" height="'.$height.'" frameborder="0" scrolling="auto" marginheight="0" marginwidth="0"></iframe>';
+		return '<iframe src="'.$widgetUrl.'" width="'.$width.'" height="'.$height.'" frameborder="0" scrolling="'.$scrolling.'" marginheight="0" marginwidth="0"></iframe>';
 	}
 }
 
